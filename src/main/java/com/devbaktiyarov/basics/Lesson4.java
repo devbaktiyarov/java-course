@@ -19,12 +19,19 @@ public class Lesson4 {
         // Цикл for  имеет следующую структуру
         // for ([инициализация счетчика]; [условие]; [изменение счетчика]) {}
         
-        int[] array = new int[5];
-        array[0] = 7;
+        // String[] arrStr = new String[10];
+
+        int[] array = new int[5]; // {7, 10, 5 17, 28}
+        array[0] = 7; 
         array[1] = 10;
         array[2] = 5;
         array[3] = 17;
         array[4] = 28;
+
+        for (int element : array) {
+           
+            System.out.println("Element: " + element);
+        }
 
         for (int i = 0; i < array.length; i++) { // array.length - размер массива
             System.out.println("Эмелент массива с индексом " + i + " : " + array[i]);

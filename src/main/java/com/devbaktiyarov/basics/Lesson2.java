@@ -4,6 +4,8 @@ package com.devbaktiyarov.basics;
 public class Lesson2 {
     public static void main(String[] args) {
 
+        
+
         /*
          * В Java типы данных делят на две большие группы: примитивные и ссылочные.
          * В состав примитивных типов (или просто примитивов) входят четыре подвида и
@@ -71,6 +73,15 @@ public class Lesson2 {
         d--;
         System.out.println("Декремент " + i);
         System.out.println( );
+
+        int inc = 10;
+        System.out.println("Посфиксный инкремент " + inc++);
+        System.out.println("Префиксный инкремент " + ++inc);
+        
+        int dec = 7;
+        System.out.println("Посфиксный декремент " + dec--);
+        System.out.println("Префиксный декремент " + --dec);
+
 
         // Арифметические операции
         int a = 125;

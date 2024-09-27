@@ -13,11 +13,16 @@ public class Lesson3 {
         В качестве условий выступает операция сравнения двух чисел. */
         /*  if (condition) {
             
-            } else {
+            } else if(condition) {
             
-            } */
+            } else {
+             
+            } 
+            */
 
-        if (sum > 30) {
+            int i = 4;
+
+        if (sum > 30 || i==5 ) {
             System.out.println("Сумма больше 30");
         } else if (sum < 30) {
             System.out.println("Сумма меньше 30");
@@ -42,13 +47,13 @@ public class Lesson3 {
         
         // С break
 
-        System.out.println("\nБез ключевого слова break");
+        // System.out.println("\nБез ключевого слова break");
     
         switch (lang) {
             case "C++":
                 System.out.println("Язык программирования C++");
-                break; // Ключевое слово break останавливает код при правильном значение
-            case "Java":
+                // Ключевое слово break останавливает код при правильном значение
+            case "Javac":
                 System.out.println("Язык программирования Java");
                 break;
             case "Javascript":
