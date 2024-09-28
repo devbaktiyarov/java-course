@@ -7,6 +7,11 @@ public class MainAnimal1 {
         Dog dog = new Dog("Bob", "Pitbull");
         dog.eat();
         dog.voice();
+        
+        Cat cat4 = new Cat();
+        cat4.name = "name";
+        System.out.println("Cat oop " + cat4.color);
+
 
 
         Lesson1 l = new Lesson1();
