@@ -5,16 +5,14 @@ public class Dog extends Animal {
     String breed;
 
     public Dog(String name, String breed) {
-        super(name);
+        super(name); // Вызов конструктора родителя
         this.breed = breed;
     }
 
-    @Override
-    void eat() {
-        System.out.println("Dog eats");        
-    }
 
     
-    
 
+
+        
 }
+
