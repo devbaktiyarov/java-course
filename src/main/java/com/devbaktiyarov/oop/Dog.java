@@ -1,6 +1,6 @@
 package com.devbaktiyarov.oop;
 
-public class Dog extends Animal {
+public class Dog extends Animal{
     
     String breed;
 
@@ -10,9 +10,28 @@ public class Dog extends Animal {
     }
 
 
-    
+    @Override
+    public void eat() {
+        System.out.println("Dog eats");
+    }
+
+    @Override
+    public void voice() {
+        // super.voice(); // Вызов метода родителя 
+        System.out.println("Dog voice ---------");
+    }
 
 
-        
+
+
+    void bark() {
+        System.out.println("Barks");
+    }
+
+
+}
+
+class Name {
+    public String name;
 }
 

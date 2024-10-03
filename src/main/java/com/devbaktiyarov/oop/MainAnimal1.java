@@ -1,6 +1,7 @@
 package com.devbaktiyarov.oop;
 
 import com.devbaktiyarov.basics.Lesson1;
+import com.devbaktiyarov.oop.inheritance.Cat;
 
 public class MainAnimal1 {
     public static void main(String[] args) {

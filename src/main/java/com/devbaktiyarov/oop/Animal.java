@@ -1,7 +1,7 @@
 package com.devbaktiyarov.oop;
 
 public class Animal {
-    String name;
+    public String name;
     
     public Animal() {}
 
@@ -9,12 +9,19 @@ public class Animal {
         this.name = name;
     }
 
-    void eat() {
-        System.out.println("Animal eats");
+    public void eat() { // сигнатура
+        System.out.println("Eat animal");
     }
 
 
-    void voice() {
-        System.out.println("Animal voice");
+    public void voice() {
+        System.out.println("animal voice");
     }
+
+
+    String name() {
+        return name;
+    }
+
+
 }
