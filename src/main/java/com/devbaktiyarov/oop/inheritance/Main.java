@@ -15,8 +15,16 @@ public class Main {
     
 
         Computer computer = new Computer();
-        computer.price = 100;
-        System.out.println(computer.price);
+        // computer.model = "uehf";
+
+        computer.setModel("Acer");
+        computer.setPrice(100);
+
+        computer.sum(1, 2);
+        computer.minus(10, 1);
+        // computer.print(1, 2);
+        System.out.println(computer.getModel());
+        System.out.println(computer.getPrice());
 
         // computer.print(); 
 

@@ -23,6 +23,7 @@ public class Student {
 
     int getScholarship() {
         if(this.averageMark == 5.0) {
+            int a = 0;
             return 2200;
         } else {
             return 1900;

@@ -8,9 +8,8 @@ public class Student {
     private String name;
     private int age;
 
-
     // Сеттер
-
+    
     void setName(String name) {
         this.name = name;
     }
@@ -19,6 +18,11 @@ public class Student {
     String getName() {
         return name;
     }
+
+
+
+
+
 
 
 
