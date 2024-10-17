@@ -2,6 +2,9 @@ package com.devbaktiyarov.collections;
 
 import java.util.*;
 
+import com.devbaktiyarov.exceptions.UserNotActiveException;
+import com.devbaktiyarov.exceptions.UserNotFoundException;
+
 public class UserManager {
     List<User> users;
 
@@ -15,12 +18,25 @@ public class UserManager {
     }
 
 
-    public void removeUser(int userId) {
+    public void removeUser(int userId) throws UserNotFoundException{
         users.remove(userId);
     }
 
     public User getUser(int userId) {
-        return users.get(userId);
+        User user = null;
+        try {
+             user = users.get(userId); // IndexOutOfBoundsException
+             return user;
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Выход за пределы массива");
+        }
+        // if(user.isActive() == false) {
+        //     // throw new UserNotFoundException("Пользователь не найден");
+        //     throw new UserNotActiveException("Пользователь не активирован");
+        // }
+        return user;
+
+        // return users.get(userId);
     }
 
     public void listUsers() {
@@ -41,7 +57,7 @@ public class UserManager {
     public boolean deactivateUser(int userId) {
         if(users.get(userId) != null) {
             users.get(userId).setActive(false);
-            removeUser(userId);
+            // removeUser(userId);
             return true;
         }
         
