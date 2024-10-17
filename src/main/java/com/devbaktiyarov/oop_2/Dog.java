@@ -1,6 +1,6 @@
 package com.devbaktiyarov.oop_2;
 
-public class Dog extends Student implements Predator, Animal {
+public class Dog extends Animal implements  Predator{
 
     @Override
     public void print() {
@@ -8,9 +8,23 @@ public class Dog extends Student implements Predator, Animal {
     }
 
     @Override
-    public void attack() {
-        System.out.println("Attack");     
+    void cat() {
+        // TODO Auto-generated method stub
+        
     }
+
+    @Override
+    public void attack() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'attack'");
+    }
+
+    
+
+    // @Override
+    // public void attack() {
+    //     System.out.println("Attack");     
+    // }
 
 
     

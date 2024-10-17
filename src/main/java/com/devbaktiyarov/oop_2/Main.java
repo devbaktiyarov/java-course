@@ -1,5 +1,7 @@
 package com.devbaktiyarov.oop_2;
 
+import com.devbaktiyarov.oop.inheritance.Cat;
+
 public class Main {
     
     public static void main(String[] args) {
@@ -36,17 +38,49 @@ public class Main {
         // predator.attack();
 
 
-        Student student = new Student();
-        student.setName("Name");
+        // Student student = new Student();
+        // student.setName("Name");
     
-        student.setAge(7);
+        // student.setAge(7);
 
-        System.out.println(student.getName());
-        System.out.println(student.getAge());
+        // System.out.println(student.getName());
+        // System.out.println(student.getAge());
 
-        student.print2();
+        // student.print2();
 
 
+
+
+        Person person = new Person();
+  
+        // person.age = 18;
+        // person.name = "F";
+        
+        
+        // System.out.println(person.name);
+        // System.out.println(person.age);
+
+        // person.setName("AB");
+        // person.setAge(12);
+
+        // Cat cat = new Cat();
+        // cat.meow();
+
+        // System.out.println(person.getName());
+        // System.out.println(person.getAge());
+
+        // // Animal animal = new Animal();
+        // Dog dog = new Dog();
+        // // dog.
+
+
+        Men men = new Men();
+        men.run();
+
+        // Human human = new Human();
+
+        Smartphone s = new Smartphone();
+        s.call();
     }
 
 }

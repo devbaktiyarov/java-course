@@ -1,8 +1,8 @@
 package com.devbaktiyarov.oop_2;
 
-public interface Animal {
+public abstract class Animal {
     
-    void print();
-
+    abstract void print();
+    abstract void cat();
 
 }
