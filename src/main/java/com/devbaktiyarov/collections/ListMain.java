@@ -7,6 +7,15 @@ public class ListMain {
     public static void main(String[] args) {
         ArrayList<Integer> arrayList = new ArrayList<>();
         
+        
+
+        Character c = 'A';
+        Long l = 10L;
+
+        Float f = 23.3f;
+        Double d = 19.3;
+        Boolean a = true;
+
         arrayList.add(3);
         arrayList.add(4);
         arrayList.add(0, null);

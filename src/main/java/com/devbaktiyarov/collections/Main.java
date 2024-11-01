@@ -61,11 +61,13 @@ public class Main {
         System.out.println();
 
         Queue<String> queue = new LinkedList<>();
+        queue.add("t");
         queue.add("d");
         queue.add("r");
         queue.add("e");
         queue.add("g");
         queue.add("c");
+
         
         System.out.println(queue.poll());
         System.out.println(queue.poll());
