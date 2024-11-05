@@ -4,7 +4,7 @@ package com.devbaktiyarov.basics;
 public class Lesson2 {
     public static void main(String[] args) {
 
-        
+        // 248163264
 
         /*
          * В Java типы данных делят на две большие группы: примитивные и ссылочные.
@@ -24,25 +24,35 @@ public class Lesson2 {
         Доступ к конкретной ячейке осуществляется через её номер. 
         Номер элемента в массиве также называют индексом 
         Первый элемент массива начинается всегда с нуля*/
-        int[] array = new int[10];
+        int[] array = new int[5];
+        // 0 1 2 3 4
         array[0] = 7;
-        System.out.println("Первый элемент массива " + array[0]); // обращаемся к первому элементу массива 
+        array[1] = 2;
+        array[2] = 10;
+        array[3] = 8;
+        array[4] = 3;
 
+        System.out.println("Первый элемент массива " + array[0]); // обращаемся к первому элементу массива 
+        System.out.println(array[2]);
         // Обьяляем переменные
         // тип_данных имя_переменной
 
-        String name = "Твое имя";
+        String name = "Arsen";
         int age = 18; // Возраст
         double weight = 70.5; // Вес
         short height = 175; // Рост
         boolean isStudent = true; // Является ли человек студентов true или false
         float grade = 4.3f; // Оценка
 
+        System.out.println("Имя " + name);
+
         System.out.println("Имя " + name + "\n" + "Возраст " + age + "\n" +
                 "Вес " + weight + "\n" + "Рост " + height + "\n" +
                 "Студент " + isStudent + "\n" + "Оценка " + grade); // \n - новая строка
         System.out.println();
+        weight = 90.5;
 
+        System.out.println("Вес " + weight);
         // Создаем свой ссылочный тип данных 
         class Developer {
             String name = "Name";
