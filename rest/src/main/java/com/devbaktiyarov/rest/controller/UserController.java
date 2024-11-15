@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import com.devbaktiyarov.rest.domain.User;
 
@@ -34,8 +35,19 @@ public class UserController {
     private Map<Integer, User> users = new HashMap<>();
 
 
+    // private final RestTemplate restTemplate;
 
-// Этот метод обрабатывает HTTP POST-запросы на путь /users/add.
+    // public UserController(RestTemplate restTemplate) {
+    //     this.restTemplate = restTemplate;
+    // }
+
+    // @GetMapping("/rest")
+    // public String getPosts() {
+    //     String url = "https://jsonplaceholder.typicode.com/posts/";
+    //     return restTemplate.getForObject(url, String.class);
+    // }
+
+    // Этот метод обрабатывает HTTP POST-запросы на путь /users/add.
 // Аннотация @RequestBody указывает Spring, что данные пользователя будут получены из тела запроса в формате JSON 
 // и автоматически преобразованы в объект User.
 // users.put(user.getId(), user); добавляет нового пользователя в Map, используя ID пользователя как ключ.
