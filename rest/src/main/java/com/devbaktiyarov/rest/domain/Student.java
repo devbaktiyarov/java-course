@@ -1,9 +1,13 @@
 package com.devbaktiyarov.rest.domain; 
 
+
+// с состоянием
 public class Student {
 
     private String name;
     private int group;
+
+
     public Student(String name, int group) {
         this.name = name;
         this.group = group;

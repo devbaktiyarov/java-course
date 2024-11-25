@@ -52,7 +52,7 @@ public class UserController {
 // и автоматически преобразованы в объект User.
 // users.put(user.getId(), user); добавляет нового пользователя в Map, используя ID пользователя как ключ.
 // Метод возвращает true, чтобы показать, что пользователь успешно добавлен.
-    @PostMapping("/add")
+    @PostMapping("/add") // users/add
     public boolean addUser(@RequestBody User user) {
         users.put(user.getId(), user);
         return true;
@@ -61,7 +61,7 @@ public class UserController {
 // ?тот метод обрабатывает HTTP GET-запросы на путь /users/{id}, где {id} — переменная, представляющая ID пользователя.
 // Аннотация @PathVariable указывает, что параметр id в URL используется для поиска пользователя.
 // users.get(id); ищет пользователя по его ID и возвращает его.
-    @GetMapping("/{id}")
+    @GetMapping("/{id}") // / users/1
     public User getUserById(@PathVariable Integer id) {
         return users.get(id);
     }
