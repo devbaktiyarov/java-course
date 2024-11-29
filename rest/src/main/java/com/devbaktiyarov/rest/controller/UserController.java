@@ -34,19 +34,6 @@ public class UserController {
     // Оно временно хранит пользователей в памяти приложения.
     private Map<Integer, User> users = new HashMap<>();
 
-
-    // private final RestTemplate restTemplate;
-
-    // public UserController(RestTemplate restTemplate) {
-    //     this.restTemplate = restTemplate;
-    // }
-
-    // @GetMapping("/rest")
-    // public String getPosts() {
-    //     String url = "https://jsonplaceholder.typicode.com/posts/";
-    //     return restTemplate.getForObject(url, String.class);
-    // }
-
     // Этот метод обрабатывает HTTP POST-запросы на путь /users/add.
 // Аннотация @RequestBody указывает Spring, что данные пользователя будут получены из тела запроса в формате JSON 
 // и автоматически преобразованы в объект User.
@@ -83,9 +70,18 @@ public class UserController {
 
 // Метод deleteUserById добавляет возможность удалять пользователя по его идентификатору (ID) из коллекции users. 
 // Он использует аннотацию @DeleteMapping, что указывает на обработку DELETE-запросов.
+
+
+    // localhost:8080/users/3
+
     @DeleteMapping("/{id}")
     public User deleteUserById(@PathVariable Integer id) {
         return users.remove(id);
+    }
+
+    @GetMapping("/str/{name}")
+    public int getStr(@PathVariable String name) {
+        return name.length();
     }
 
 
