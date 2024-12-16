@@ -24,6 +24,13 @@ public class Student {
     public void setGroup(int group) {
         this.group = group;
     }
+    
+    @Override
+    public String toString() {
+        return "Student [name=" + name + ", group=" + group + "]";
+    }
+
+    
 
     
     
