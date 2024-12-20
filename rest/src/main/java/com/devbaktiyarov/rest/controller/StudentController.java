@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.devbaktiyarov.rest.domain.Student;
+import com.devbaktiyarov.rest.service.StudentService;
 
 // http://localhost:8081/students
 
@@ -24,37 +25,37 @@ import com.devbaktiyarov.rest.domain.Student;
 @RequestMapping("/students")
 public class StudentController {
 
-    ArrayList<Student> students = new ArrayList<>(); // БД - студентов
+    
+    private final StudentService service;
+
+    public StudentController(StudentService service) {
+        this.service = service;
+    }
 
     @PostMapping("/add")
     public ResponseEntity<Student> addNewStudent(@RequestBody Student student) {
-  
-        students.add(student);
-        return ResponseEntity.status(HttpStatus.CREATED).body(student);
+        service.save(student);
+        return ResponseEntity.status(HttpStatus.CREATED)
+            .body(student);
     }
 
     @GetMapping("/list")
     public ResponseEntity<List<Student>> listStudent() {
-        return ResponseEntity.status(HttpStatus.OK).body(students);
+        return ResponseEntity.status(HttpStatus.OK)
+            .body(service.findAll());
     }
 
-    @GetMapping("/bad")
-    public ResponseEntity getMethodName() {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-    }
-    
-
-    @DeleteMapping("/del")
-    public void deleteStudents() {
-        students.clear();
+    @DeleteMapping("/{id}")
+    public void deleteStudents(@PathVariable int id) {
+        service.deleteById(id);
     }
 
 
 
-    @GetMapping("/ok")
-    public ResponseEntity<Student> getOk() {
-        Student student = new Student("Name", 1);
-        return ResponseEntity.status(HttpStatus.OK).body(student);
+    @GetMapping("/{id}")
+    public ResponseEntity<Student> findStudentById(@PathVariable int id) {
+        return ResponseEntity.status(HttpStatus.OK)
+            .body(service.findById(id));
     }
 
 
